@@ -4,24 +4,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>gemini new feature</title>
+    <title>Gemini AI 2.0 - Interactive Text Assistant</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <!-- Background glow elements -->
+    <div class="bg-glow blob-1"></div>
+    <div class="bg-glow blob-2"></div>
+
     <main>
         <div class="container">
-            <div class="logo">
-                AI 2.0 😊
-            </div>
-            <div class="input-feild">
-                <input id="promptInput" type="text" placeholder="Enter your text here....">
-                <button id="generateBtn">Generate</button>
+            <header class="app-header">
+                <div class="logo">
+                    <span class="logo-icon">✨</span>
+                    <span class="logo-text">Gemini AI <span class="badge">2.0</span></span>
+                </div>
+                <p class="subtitle">Generate responses & highlight text to query or edit inline</p>
+            </header>
+
+            <div class="input-card">
+                <div class="input-feild">
+                    <div class="input-wrapper">
+                        <svg class="sparkle-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z" fill="currentColor"/>
+                        </svg>
+                        <input id="promptInput" type="text" placeholder="Ask anything or enter a topic to explore..." autocomplete="off">
+                    </div>
+                    <button id="generateBtn">
+                        <span>Generate</span>
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </div>
             </div>
 
-            <div id="response"></div>
+            <div class="response-section">
+                <div class="section-title">
+                    <span>Response Output</span>
+                    <span class="hint-badge">💡 Tip: Highlight text inside output to ask inline doubts</span>
+                </div>
+                <div id="response" class="response-box">
+                    <div class="placeholder-state">
+                        <div class="empty-icon">🤖</div>
+                        <p>Your AI-generated response will appear here.</p>
+                        <span class="sub-hint">Try generating text, then select any phrase to trigger inline AI rewriting or doubt resolution!</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
+
     <script src="script.js"></script>
 </body>
 

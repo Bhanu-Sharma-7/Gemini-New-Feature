@@ -43,7 +43,11 @@ generateBtn.addEventListener('click', async () => {
     }
 })
 
-document.addEventListener('mouseup', () => {
+document.addEventListener('mouseup', (e) => {
+    if (doubtButton.contains(e.target) || doubtInput.contains(e.target)) {
+        return;
+    }
+
     const selection = window.getSelection()
     selectedText = selection.toString().trim()
 
@@ -62,7 +66,7 @@ document.addEventListener('mouseup', () => {
     selectedRange = range.cloneRange()
 
     doubtButton.style.left = rect.left + "px";
-    doubtButton.style.top = (rect.bottom + 5) + "px";
+    doubtButton.style.top = (rect.bottom + 8) + "px";
     doubtButton.style.display = "block";
 
     doubtInput.style.display = "none";
