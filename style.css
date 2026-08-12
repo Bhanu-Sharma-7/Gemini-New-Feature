@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    background: #212121;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #e8e8e8;
+}
+
+.container {
+    height: 50vh;
+    width: 50vw;
+    border-radius: 0.5em;
+}
+
+.input-feild {
+    display: flex;
+    gap: 10px;
+}
+
+.input-feild input {
+    flex: 1;
+    padding: 10px;
+}
+
+.input-feild button {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#response {
+    margin-top: 20px;
+}
+
+#doubtButton {
+    position: fixed;
+    display: none;
+    z-index: 1000;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+#doubtInput {
+    position: fixed;
+    display: none;
+    z-index: 1000;
+    padding: 8px;
+    width: 220px;
+}
